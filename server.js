@@ -7,6 +7,8 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes")(app);
 app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
@@ -24,9 +26,6 @@ mongoose.connect(
     }
 );
 
-
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes")(app);
 
 // Listen on port 3000
 app.listen(3000, () => {
