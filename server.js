@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-require("./routes/html-routes.js")(app);
 require("./routes/api-routes")(app);
+require("./routes/html-routes.js")(app);
 app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));

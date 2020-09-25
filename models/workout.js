@@ -42,7 +42,7 @@ const WorkoutSchema = new Schema({
         distance: {
             type: Number
         }
-    },
+    }
     ]
 },
     {
